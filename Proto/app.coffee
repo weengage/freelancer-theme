@@ -1315,8 +1315,8 @@ document.addEventListener 'keydown', (event) ->
 				BigPromoBrandImage.animate("small")
 				Controls.animate("unselected")
 				PlayPauseVideoController.animate("pauseFocus")
-				video2.player.play()
 				Utils.delay 1, ->
+					video2.player.play()
 					selectedItem = BigPromoImageSmall
 			else if selectedItem == RightPanelLastMoreFocus
 				BigPromoImageSmall.animate("Selected")
