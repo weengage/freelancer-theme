@@ -1029,6 +1029,7 @@ AppState = "Normal"
 EpisodeTime = "New"
 LastEpisodeTime = "New"
 videoPlaying = "New"
+CSRightArrow.animate("invisible")
 
 # The function called from the 2 sec Delay, dude to long animation in BIG promo panel
 SetSelectedItem = () ->
@@ -1041,11 +1042,14 @@ SetSelectedItem = () ->
 # Check for end credits and trigger the credit squeeze
 # CREDIT SQUEEZE FOR FIRST EPISODE 
 video.player.addEventListener "timeupdate", ->
-		if video.player.currentTime >= 618 and video.player.currentTime <= 619
+		if video.player.currentTime >= 618 and video.player.currentTime <= 618.5
 				video.animate
 					properties:
 						scale: 0.53
 						originX: 0
+					animationOptions:
+						time: 0.5
+						delay: 0
 				# Close right panel if it's open
 				CatastropheFocus2.animate("Unselected")
 				Controls.animate("unselected")
@@ -1072,6 +1076,8 @@ video2.player.addEventListener "timeupdate", ->
 					properties:
 						scale: 0.36
 						originX: 0
+						animationOptions:
+							time: 0.5
 				# Close right panel if it's open
 				RightPanelLast.animate("unselected")
 				# CreditSqueeze
@@ -1523,6 +1529,7 @@ document.addEventListener 'keydown', (event) ->
 				Controls.animate("unselected")
 				BackVideoController.animate("unselected")
 				Background.animate("visible")
+				CSRightArrow.state("invisible")
 				BigPromoContainer.animate("hide")
 				CreditSqueeze = "none"
 				CSBigPromoFocus.animate("Selected")
