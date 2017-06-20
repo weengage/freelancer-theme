@@ -84,11 +84,12 @@ CSItemFocusa.states.Unselected =
 CSEpisodeAutoplay = new Layer
 	parent: CS1Container
 	image: "images/EpisodeAutoplayCountdown.png"
-	width: 241
-	height: 95
+	width: 240
+	height: 135
 	x:888
-	y:161
+	y:120
 	opacity: 1
+
 
 
 
@@ -1065,8 +1066,8 @@ video.player.addEventListener "timeupdate", ->
 					image: "images/EpisodeCountdown.gif"
 					width: 193
 					height: 40
-					x: 1
-					y: 28
+					x: 0
+					y: 68
 				selectedItem = CSItemFocusa
 
 # CREDIT SQUEEZE FOR THE LAST EPISODE - BIG PROMO
