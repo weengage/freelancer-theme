@@ -1529,7 +1529,7 @@ document.addEventListener 'keydown', (event) ->
 				Controls.animate("unselected")
 				BackVideoController.animate("unselected")
 				Background.animate("visible")
-				CSRightArrow.state("invisible")
+				CSRightArrow.animate("invisible")
 				BigPromoContainer.animate("hide")
 				CreditSqueeze = "none"
 				CSBigPromoFocus.animate("Selected")
